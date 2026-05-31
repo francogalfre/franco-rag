@@ -1,0 +1,24 @@
+{
+    "name": "franco-rag",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "dev": "bun mastra dev"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.4.16",
+        "@types/bun": "^1.3.14",
+        "@types/node": "^25.9.1",
+        "mastra": "^1.10.2"
+    },
+    "peerDependencies": {
+        "typescript": "^6.0.3"
+    },
+    "dependencies": {
+        "@mastra/core": "^1.37.1",
+        "@mastra/libsql": "^1.11.1",
+        "@mastra/rag": "^2.2.1",
+        "zod": "^4.4.3"
+    }
+}
