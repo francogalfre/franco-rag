@@ -1,11 +1,14 @@
-import { Agent } from "@mastra/core/agent";
-import { env } from "@/config";
+import { Agent } from "@mastra/core/agent"
+import { LIBSQL_PROMPT } from "@mastra/libsql"
 
-import { ragPrompt } from "@/mastra/agents/prompts/rag.prompt";
+import { env } from "@/config"
+import { ragPrompt } from "@/mastra/agents/prompts/rag.prompt"
+import { vectorQueryTool } from "@/mastra/tools/rag.tool"
 
 export const ragAgent = new Agent({
-    id: 'rag-agent',
-    name: "Rag Agent",
-    instructions: ragPrompt,
-    model: env?.LLM_MODEL || "openrouter/minimax/minimax-m2.5:free"
+    id: "rag-agent",
+    name: "RAG Agent",
+    instructions: `${ragPrompt}\n\n${LIBSQL_PROMPT}`,
+    model: env.LLM_MODEL,
+    tools: { vectorQueryTool },
 })

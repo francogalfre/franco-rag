@@ -1,13 +1,9 @@
-import { Mastra } from "@mastra/core";
+import { Mastra } from "@mastra/core"
 
 import { ragAgent } from "@/mastra/agents/rag.agent"
+import { libsqlVector } from "@/mastra/stores"
 
 export const mastra = new Mastra({
-    agents: { ragAgent }
+    agents: { ragAgent },
+    vectors: { libsqlVector },
 })
-
-const stream = await ragAgent.stream("Hi, how are you?")
-
-for await (const chunk of stream.textStream) {
-    process.stdout.write(chunk)
-}
