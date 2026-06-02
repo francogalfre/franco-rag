@@ -31,4 +31,4 @@ export const env = parsed.data
 
 export const VECTOR_INDEX = "franco_knowledge"
 export const EMBEDDING_MODEL = "nvidia/llama-nemotron-embed-vl-1b-v2:free"
-export const RERANKER_MODEL_ID = env.LLM_MODEL.replace(/^openrouter\//, "")
+export const LLM_MODEL_ID = env.LLM_MODEL.replace(/^openrouter\//, "")
