@@ -1,17 +1,12 @@
 import { readdir } from "node:fs/promises"
 import { join } from "node:path"
 
-import { createOpenRouter } from "@openrouter/ai-sdk-provider"
 import { LibSQLVector } from "@mastra/libsql"
 import { MDocument } from "@mastra/rag"
 import { embedMany } from "ai"
 
 import { env, VECTOR_INDEX, EMBEDDING_MODEL } from "@/config"
-
-
-const openrouter = createOpenRouter({
-    apiKey: env.OPENROUTER_API_KEY,
-});
+import { openrouter } from "@/utils/openrouter"
 
 const vector = new LibSQLVector({
     id: "libsql-vector",

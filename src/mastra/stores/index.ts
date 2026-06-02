@@ -1,2 +1,2 @@
-export { libsqlVector } from "./vectors"
 export { libsqlStorage } from "./memory"
+export { libsqlVector } from "./vectors"
