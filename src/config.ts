@@ -5,6 +5,11 @@ const EnvSchema = z.object({
     OPENROUTER_API_KEY: z.string().min(1),
     LLM_MODEL: z.string().default("openrouter/minimax/minimax-m2.5:free"),
 
+    // --------- Observability
+    LANGFUSE_PUBLIC_KEY: z.string().min(1),
+    LANGFUSE_SECRET_KEY: z.string().min(1),
+    LANGFUSE_BASE_URL: z.string().optional(),
+
     // --------- Storage
     DATABASE_URL: z.string().min(1),
     DATABASE_AUTH_TOKEN: z.string().min(1),

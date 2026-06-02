@@ -10,12 +10,11 @@ export const ragAgent = new Agent({
     id: "rag-agent",
     name: "RAG Agent",
     instructions: `${ragPrompt} \n\n ${LIBSQL_PROMPT}`,
-    model: env.LLM_MODEL,
+    model: [{ model: env.LLM_MODEL, modelSettings: { maxOutputTokens: 400 } }],
     tools: { vectorQueryTool },
     memory: new Memory({
         options: {
             lastMessages: 20,
-            observationalMemory: true,
         },
     }),
 })
