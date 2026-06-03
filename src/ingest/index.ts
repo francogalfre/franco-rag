@@ -1,58 +1,53 @@
-import { readdir } from "node:fs/promises"
 import { join } from "node:path"
-
-import { LibSQLVector } from "@mastra/libsql"
 import { MDocument } from "@mastra/rag"
 import { embedMany } from "ai"
 
-import { env, VECTOR_INDEX, EMBEDDING_MODEL } from "@/config"
+import { EMBEDDING_MODEL } from "@/config"
 import { openrouter } from "@/utils/openrouter"
 
-const vector = new LibSQLVector({
-    id: "libsql-vector",
-    url: env.DATABASE_URL,
-    authToken: env.DATABASE_AUTH_TOKEN,
-})
+import { resetIndex, setupIndex, save } from "@/ingest/vector"
+import type { FileResult } from "@/ingest/types"
 
-const CONTENT_DIR = join(import.meta.dir, "../../content")
+const CONTENT_DIR = join(process.cwd(), "content")
 
-async function ingestFile(file: string, isFirst: boolean) {
+async function processFile(file: string): Promise<FileResult | null> {
     const text = await Bun.file(join(CONTENT_DIR, file)).text()
 
-    const doc = MDocument.fromMarkdown(text)
-    const chunks = await doc.chunk({ strategy: "recursive", maxSize: 512, overlap: 50 })
+    const chunks = await MDocument.fromMarkdown(text).chunk({
+        strategy: "recursive",
+        maxSize: 512,
+        overlap: 50,
+    })
 
-    if (chunks.length === 0) return
+    if (chunks.length === 0) return null
 
     const { embeddings } = await embedMany({
         model: openrouter.textEmbeddingModel(EMBEDDING_MODEL),
         values: chunks.map((c) => c.text),
     })
 
-    if (isFirst) {
-        const dim = embeddings[0]?.length
-        if (!dim) throw new Error("Empty embedding response")
-
-        await vector.createIndex({ indexName: VECTOR_INDEX, dimension: dim }).catch(() => { })
-    }
-
-    await vector.upsert({
-        indexName: VECTOR_INDEX,
-        vectors: embeddings,
-        metadata: chunks.map((c) => ({
-            text: c.text,
-            source: file.replace(".md", ""),
-        })),
-    })
-
-    console.log(`[${file}] ${chunks.length} chunks ingested`)
+    return { file, chunks, embeddings }
 }
 
-const files = (await readdir(CONTENT_DIR)).filter((f) => f.endsWith(".md"))
+const files = [...new Bun.Glob("*.md").scanSync(CONTENT_DIR)]
 console.log(`Found ${files.length} files`)
 
-for (let i = 0; i < files.length; i++) {
-    await ingestFile(files[i] as string, i === 0)
+const results: FileResult[] = []
+
+for (const file of files) {
+    const result = await processFile(file)
+    if (result) results.push(result)
+}
+
+const dimension = results[0]?.embeddings[0]?.length
+if (!dimension) throw new Error("No embeddings generated")
+
+await resetIndex()
+await setupIndex(dimension)
+
+for (const { file, chunks, embeddings } of results) {
+    await save(file, chunks, embeddings)
+    console.log(`[${file}] ${chunks.length} chunks`)
 }
 
 console.log("Done.")

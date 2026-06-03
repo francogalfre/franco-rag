@@ -6,8 +6,8 @@ const EnvSchema = z.object({
     LLM_MODEL: z.string().default("openrouter/minimax/minimax-m2.5:free"),
 
     // --------- Observability
-    LANGFUSE_PUBLIC_KEY: z.string().min(1),
-    LANGFUSE_SECRET_KEY: z.string().min(1),
+    LANGFUSE_PUBLIC_KEY: z.string().optional(),
+    LANGFUSE_SECRET_KEY: z.string().optional(),
     LANGFUSE_BASE_URL: z.string().optional(),
 
     // --------- Storage
@@ -15,8 +15,7 @@ const EnvSchema = z.object({
     DATABASE_AUTH_TOKEN: z.string().min(1),
 
     // --------- Github
-    GITHUB_TOKEN: z.string().min(1),
-    GITHUB_USERNAME: z.string().default("francogalfre"),
+    GITHUB_TOKEN: z.string().optional(),
 })
 
 const parsed = EnvSchema.safeParse(process.env)
