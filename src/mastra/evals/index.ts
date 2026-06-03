@@ -12,14 +12,14 @@ const model = openrouter.chat(LLM_MODEL_ID)
 export const scorers = {
     answerRelevancy: {
         scorer: createAnswerRelevancyScorer({ model }),
-        sampling: { type: "ratio" as const, rate: 1 },
+        sampling: { type: "ratio" as const, rate: 0.1 },
     },
     faithfulness: {
         scorer: createFaithfulnessScorer({ model }),
-        sampling: { type: "ratio" as const, rate: 1 },
+        sampling: { type: "ratio" as const, rate: 0.1 },
     },
     hallucination: {
         scorer: createHallucinationScorer({ model }),
-        sampling: { type: "ratio" as const, rate: 1 },
+        sampling: { type: "ratio" as const, rate: 0.1 },
     },
 }

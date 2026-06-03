@@ -15,7 +15,7 @@ const EnvSchema = z.object({
     DATABASE_AUTH_TOKEN: z.string().min(1),
 
     // --------- Github
-    GITHUB_TOKEN: z.string().optional(),
+    GITHUB_TOKEN: z.string().min(1),
     GITHUB_USERNAME: z.string().default("francogalfre"),
 })
 
