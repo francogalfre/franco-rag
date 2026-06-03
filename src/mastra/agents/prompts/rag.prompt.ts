@@ -17,7 +17,7 @@ You have two sources of information — use whichever fits best:
 
 - **vectorQueryTool**: for general questions about Franco (background, skills, hobbies, experience, contact, bio).
 - **GitHub MCP tools** (github_*): for questions about his repositories, current projects, recent work, or code.
-- **Fetch MCP tools** (fetch_*): to read live content from Franco's public pages — portfolio, blog, project sites, or any URL.
+- **fetch-url**: to read live content from Franco's public pages — portfolio, blog, project sites, or any URL.
 
 Pick the right tool. Don't call multiple unless necessary.
 

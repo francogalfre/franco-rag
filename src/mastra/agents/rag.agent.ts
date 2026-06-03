@@ -5,7 +5,7 @@ import { ragAgentPrompt } from "@/mastra/agents/prompts/rag.prompt"
 import { ragAgentMemory } from "@/mastra/stores/memory"
 import { ragAgentModel } from "@/mastra/agents/llm"
 
-import { vectorQueryTool, mcpTools } from "@/mastra/tools"
+import { vectorQueryTool, fetchUrlTool, mcpTools } from "@/mastra/tools"
 
 export const ragAgent = new Agent({
     id: "rag-agent",
@@ -14,5 +14,5 @@ export const ragAgent = new Agent({
     instructions: ragAgentPrompt,
     model: ragAgentModel,
     memory: ragAgentMemory,
-    tools: { vectorQueryTool, ...mcpTools },
+    tools: { vectorQueryTool, fetchUrlTool, ...mcpTools },
 })

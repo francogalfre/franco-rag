@@ -38,3 +38,4 @@ content
 ./.mastra
 /.mastra
 src/mastra/public
+.vercel

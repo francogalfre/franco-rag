@@ -11,9 +11,5 @@ export const mcp = new MCPClient({
                 },
             },
         },
-        fetch: {
-            command: "bunx",
-            args: ["mcp-fetch-server"],
-        },
     },
 });
