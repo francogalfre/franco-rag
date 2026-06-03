@@ -1,4 +1,4 @@
-name: Ingest knowledge base
+name: 🧠 Ingest knowledge base
 
 on:
   push:
@@ -8,17 +8,22 @@ on:
 
 jobs:
   ingest:
+    name: 📥 Run ingest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: 📦 Checkout
+        uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
+      - name: 🍞 Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
-      - run: bun install --frozen-lockfile
+      - name: 📚 Install dependencies
+        run: bun install --frozen-lockfile
 
-      - run: bun run ingest
+      - name: ✨ Ingest content
+        run: bun run ingest
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_AUTH_TOKEN: ${{ secrets.DATABASE_AUTH_TOKEN }}
