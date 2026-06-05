@@ -1,6 +1,10 @@
 import { z } from "zod"
 
 const EnvSchema = z.object({
+    // --------- Server
+    PORT: z.coerce.number().default(4111),
+    ALLOWED_ORIGIN: z.string().optional(),
+
     // --------- LLM
     OPENROUTER_API_KEY: z.string().min(1),
     LLM_MODEL: z.string().default("openrouter/minimax/minimax-m2.5:free"),

@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "bun mastra dev",
         "build": "mastra build",
-        "start": "mastra start",
+        "start": "bun src/server/index.ts",
+        "db:push": "drizzle-kit push",
+        "db:studio": "drizzle-kit studio",
         "ingest": "bun src/ingest/index.ts",
         "eval": "bun src/mastra/evals/run.ts"
     },
@@ -14,6 +16,7 @@
         "@biomejs/biome": "2.4.16",
         "@types/bun": "^1.3.14",
         "@types/node": "^25.9.1",
+        "drizzle-kit": "^0.31.10",
         "mastra": "^1.12.1"
     },
     "peerDependencies": {
@@ -22,6 +25,7 @@
     "dependencies": {
         "@mastra/core": "^1.40.0",
         "@mastra/evals": "^1.2.4",
+        "@mastra/hono": "^1.4.24",
         "@mastra/langfuse": "^1.3.4",
         "@mastra/libsql": "^1.12.1",
         "@mastra/mcp": "^1.9.1",
@@ -30,6 +34,7 @@
         "@mastra/rag": "^2.2.1",
         "@openrouter/ai-sdk-provider": "^2.9.0",
         "ai": "^6.0.193",
+        "drizzle-orm": "^0.45.2",
         "zod": "^4.4.3"
     }
 }
