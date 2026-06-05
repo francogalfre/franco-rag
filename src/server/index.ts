@@ -1,19 +1,19 @@
 import { Hono } from "hono"
-
 import { cors } from "hono/cors"
-import { env } from "@/config"
 
 import { mastra } from "@/mastra"
 import { MastraServer, type HonoBindings, type HonoVariables } from "@mastra/hono"
+
+import { env } from "@/config"
 
 import { securityMiddleware } from "@/server/middlewares"
 import { rateLimitMiddleware } from "@/server/rate-limit"
 
 const app = new Hono<{ Bindings: HonoBindings; Variables: HonoVariables }>()
 
-const allowedOrigins = env.ALLOWED_ORIGIN
+const allowedOrigins: string | string[] = env.ALLOWED_ORIGIN
     ? env.ALLOWED_ORIGIN.split(",").map(o => o.trim())
-    : ["*"]
+    : "*"
 
 app.use(
     "*",
@@ -36,5 +36,5 @@ await server.init()
 
 const port = env.PORT ?? 4111
 
-Bun.serve({ port, fetch: app.fetch })
+Bun.serve({ port, fetch: app.fetch, idleTimeout: 120 })
 console.log(`[server] Listening on http://localhost:${port}`)
