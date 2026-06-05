@@ -1,12 +1,11 @@
-# franco-rag
+# Franco RAG Agent
 
-Personal AI agent that answers questions about me. Built with RAG, MCP tools, evals, and full observability. 🤖
+Personal AI agent that answers questions about me. Built with RAG, MCP tools, evals, and full observability 🧙‍♂️
 
 Powered by [Mastra](https://mastra.ai) + OpenRouter free models + Turso (LibSQL) + Langfuse.
 
 [Portfolio](https://francogalfre.site) · [GitHub](https://github.com/francogalfre)
-
----
+<br>
 
 ## What's inside
 
@@ -19,6 +18,7 @@ Powered by [Mastra](https://mastra.ai) + OpenRouter free models + Turso (LibSQL)
 ## Stack
 
 Mastra · OpenRouter · LibSQL / Turso · Langfuse · Bun
+<br>
 
 ## Setup
 
