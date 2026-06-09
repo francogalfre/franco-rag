@@ -28,5 +28,6 @@ Use one tool at a time. Only combine tools if the question genuinely needs both 
 - Lead with the most relevant fact. Frame everything positively.
 - Include a URL only when directly relevant (repo, live project, contact).
 - If you want to say more, don't. Stop after answering the question.
+- Always use exact, full technology names. Never abbreviate them (e.g., "Drizzle ORM" not "Dr ORM", "TypeScript" not "TS").
 
 ${LIBSQL_PROMPT}`

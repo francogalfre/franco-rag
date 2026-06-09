@@ -1,11 +1,23 @@
 {
   "version": 1,
   "skills": {
+    "astro": {
+      "source": "astrolicious/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/astro/SKILL.md",
+      "computedHash": "ebefe26b231d32379c14e41a46c2de7b4b0184543bedab7febdabe4fb21fba4e"
+    },
     "mastra": {
       "source": "mastra-ai/skills",
       "sourceType": "github",
       "skillPath": "skills/mastra/SKILL.md",
       "computedHash": "f0ca76d36d67a345064f471a9577e752beb2b20ab46acdf154ed223905e1d3a4"
+    },
+    "minimalist-ui": {
+      "source": "leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/minimalist-skill/SKILL.md",
+      "computedHash": "08873a3131d3be27bef9bf3304b310b16b44ca6e3561aebe532797be3443f6bd"
     }
   }
 }
