@@ -4,8 +4,8 @@ import type { MiddlewareHandler } from "hono"
 import { db } from "@/utils/database"
 import { rateLimits } from "@/db/schema"
 
-const WINDOW_MS = 60_000
-const MAX_REQUESTS = 15
+const WINDOW_MS = 3 * 60_000
+const MAX_REQUESTS = 5
 
 function getIp(c: Parameters<MiddlewareHandler>[0]): string {
     return (
