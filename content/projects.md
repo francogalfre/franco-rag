@@ -65,16 +65,6 @@ CLI tool that scans codebases for AI-generated code issues that get missed in st
 Repository: https://github.com/francogalfre/vibrant
 Live: https://francogalfre.vercel.app/projects/vibrant
 
-## 🤖 Jarvis Launcher
-
-Clap twice (or use a custom phrase) to trigger Claude Code and Cursor. A voice-activated workspace launcher with customizable trigger phrases and real-time microphone detection.
-
-**Tech stack:** Python
-
-**Status:** Public, 4 GitHub stars.
-
-Repository: https://github.com/francogalfre/jarvis-launcher
-
 ## 🧠 Skills
 
 A collection of reusable agent skills designed to enhance AI coding agents across development, design, and other workflows. Built to be composed and reused across projects.

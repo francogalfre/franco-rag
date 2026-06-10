@@ -16,7 +16,7 @@
 - Orchestrates complex integrations between AI agents and external tools
 
 **Stack used in production:**
-- AI: Amazon Bedrock, AI SDKs, RAG, Agent orchestration
+- AI: Amazon Bedrock, AI SDKs, Langchain, Langgraph, RAG, Agent orchestration
 - Cloud: AWS (Lambda, API Gateway, DynamoDB, S3)
 - Frontend: React, Next.js, TypeScript
 - Other: TypeScript throughout

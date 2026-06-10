@@ -2,56 +2,56 @@
 
 ## Languages
 
-- **TypeScript** — Proficient. Primary language. Used in production at Crombie, Swear, Lens, Vibrant, Promptsmith, Freelanceo, Patitas, and most freelance projects.
+- **TypeScript** — Proficient. Primary language used in most projects.
 - **JavaScript** — Proficient. Underlying language; used wherever TypeScript is used.
-- **Python** — Comfortable. Used in Jarvis Launcher and AI scripting. Not used in production web systems.
+- **Python** — Basic. Knowledge of fundamentals; never used in projects, but would like to learn more about it.
 - **HTML/CSS** — Proficient. Used in all frontend work.
 
 ## Frontend
 
-- **React** — Proficient. Used in production at Crombie and across 25+ freelance client projects.
-- **Next.js** — Proficient. Used in production at Crombie, Swear (Next.js 15), Freelanceo, Netflix Clone, and multiple freelance projects.
-- **Astro** — Proficient. Used in portfolio site and Astrotips.
-- **Tailwind CSS** — Proficient. Used in most projects including Swear, portfolio, Netflix Clone, and freelance work.
-- **shadcn/ui** — Comfortable. Used in Netflix Clone.
+- **React** — Proficient. Used across production projects and freelance work.
+- **Next.js** — Proficient. Used in multiple production projects.
+- **Astro** — Proficient. Used in various projects.
+- **Tailwind CSS** — Proficient. Used in most projects.
+- **shadcn/ui** — Comfortable. Used in multiple projects.
 
 ## Backend
 
-- **Hono** — Comfortable. Used in production in Swear as the API server.
-- **tRPC** — Comfortable. Used in production in Swear for type-safe client–server communication.
+- **Hono** — Comfortable. Lightweight web framework for APIs.
+- **tRPC** — Comfortable. Type-safe client–server communication.
 - **Express** — Comfortable. Used in freelance and learning projects.
-- **Bun** — Proficient. Preferred runtime over Node.js. Used as runtime, package manager, and bundler in Swear and new projects.
+- **Bun** — Proficient. Preferred runtime over Node.js.
 - **Node.js** — Proficient. Used in freelance projects and earlier work.
-- **Drizzle ORM** — Comfortable. Used in production in Swear. Preferred ORM.
-- **Prisma** — Comfortable. Used in Netflix Clone and freelance projects.
-- **PostgreSQL** — Comfortable. Used in production via Supabase (Swear) and freelance projects.
-- **Supabase** — Comfortable. Used for hosted PostgreSQL in Swear and Netflix Clone.
+- **Drizzle ORM** — Comfortable. Preferred ORM.
+- **Prisma** — Comfortable. Used in multiple projects.
+- **PostgreSQL** — Comfortable. Used in production projects.
+- **Supabase** — Comfortable. Used for hosted PostgreSQL.
 - **Zod** — Proficient. Used for schema validation in most TypeScript projects.
-- **Better-Auth** — Comfortable. Used in production in Swear.
-- **Docker** — Comfortable. Used in freelance projects for containerization.
+- **Better-Auth** — Comfortable. Authentication framework.
+- **Docker** — Comfortable. Used for containerization.
 
 ## AI & Machine Learning
 
-- **Amazon Bedrock** — Comfortable. Used in production at Crombie for AI model access and agent workflows.
-- **LangChain** — Comfortable. Used in Lens (multi-agent idea analysis system). Personal project, not production SaaS.
-- **LangGraph** — Learning. Used alongside LangChain in Lens for multi-agent orchestration.
-- **Mastra** — Learning. Integrating into new AI projects.
-- **Vercel AI SDK** — Comfortable. Used in AI-powered web projects.
-- **OpenRouter** — Comfortable. Daily use for routing LLM requests across providers.
-- **RAG (Retrieval-Augmented Generation)** — Comfortable. Designs and implements RAG pipelines at Crombie (production) and in personal projects.
-- **Agent orchestration** — Comfortable. Designs multi-agent systems at Crombie and in personal projects (Lens).
-- **OpenAI API / LLM APIs** — Comfortable. Understands prompt engineering, tool use, and structured outputs.
+- **Amazon Bedrock** — Comfortable. AI model access and agent workflows.
+- **LangChain** — Comfortable. LLM orchestration framework.
+- **LangGraph** — Comfortable. Multi-agent orchestration.
+- **Mastra** — Comfortable. Agent framework for AI projects.
+- **Vercel AI SDK** — Comfortable. AI-powered web applications.
+- **OpenRouter** — Comfortable. LLM request routing across providers.
+- **RAG (Retrieval-Augmented Generation)** — Comfortable. Designs and implements RAG pipelines.
+- **Agent orchestration** — Comfortable. Designs multi-agent systems.
+- **OpenAI API / LLM APIs** — Comfortable. Prompt engineering, tool use, structured outputs.
 
 ## Infrastructure & Cloud
 
-- **AWS Lambda** — Comfortable. Used in production at Crombie for serverless compute.
-- **AWS API Gateway** — Comfortable. Used in production at Crombie.
-- **AWS DynamoDB** — Comfortable. Used in production at Crombie.
-- **AWS S3** — Comfortable. Used in production at Crombie.
-- **Vercel** — Proficient. Deploys most projects including Swear, portfolio, Lens, and Vibrant.
-- **Turborepo** — Comfortable. Used in Swear monorepo to manage multiple packages.
-- **Polar** — Comfortable. Integrated into Swear for payment processing and charity donation flows.
-- **Biome** — Comfortable. Used as code formatter and linter in TypeScript projects.
+- **AWS Lambda** — Comfortable. Serverless compute.
+- **AWS API Gateway** — Comfortable. API management.
+- **AWS DynamoDB** — Comfortable. NoSQL database.
+- **AWS S3** — Comfortable. Object storage.
+- **Vercel** — Proficient. Deployment platform for most projects.
+- **Turborepo** — Comfortable. Monorepo management.
+- **Polar** — Comfortable. Payment processing.
+- **Biome** — Comfortable. Code formatter and linter.
 
 ## Design & Tools
 
