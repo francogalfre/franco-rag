@@ -33,7 +33,7 @@ Franco is currently working full-time at Crombie as a Software Engineer & AI, bu
 Portfolio: https://francogalfre.site
 GitHub: https://github.com/francogalfre
 LinkedIn: https://www.linkedin.com/in/francogalfre/
-Email: francogalfre.code@gmail.com
+Email: francogalfre.work@gmail.com
 Twitter / X: https://x.com/francogalfredev
 Instagram: https://www.instagram.com/francxgalfre
 
