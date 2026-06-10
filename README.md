@@ -8,11 +8,13 @@ I built this to explore **RAG pipelines, MCP tool integration, and agent orchest
 
 ## How it works
 
-**RAG Pipeline** — Knowledge base from Markdown files, vectorized and stored in LibSQL
-**GitHub MCP** — Live project data so the agent stays current without manual updates
-**Tool Routing** — Smart decisions: GitHub for recent work, knowledge base for history, Context7 for tech explanations
-**Memory** — Conversation history per thread, persisted in LibSQL
-**Observability** — Full traces and evals via Langfuse
+- RAG Pipeline — Knowledge base from Markdown files, vectorized and stored in LibSQL
+- GitHub MCP — Live project data so the agent stays current without manual updates
+- Tool Routing — Smart decisions: GitHub for recent work, knowledge base for history, Context7 for tech explanations
+- Memory — Conversation history per thread, persisted in LibSQL
+- Observability — Full traces and evals via Langfuse
+
+<br>
 
 ## Stack
 
