@@ -37,3 +37,8 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 ./.mastra
 /.mastra
 src/mastra/public
+# Local Pi runtime state
+.atl/
+
+# Vercel local state
+.vercel
