@@ -5,7 +5,6 @@
     "private": true,
     "scripts": {
         "dev": "bun mastra dev",
-        "build": "mastra build",
         "start": "bun src/server/index.ts",
         "db:push": "drizzle-kit push",
         "db:studio": "drizzle-kit studio",
