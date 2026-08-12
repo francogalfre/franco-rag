@@ -1,5 +1,5 @@
 import { MCPClient } from "@mastra/mcp";
-import { env } from "@/config";
+import { env } from "../../config.js";
 
 export const mcp = new MCPClient({
     servers: {

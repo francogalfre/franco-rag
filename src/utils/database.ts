@@ -1,8 +1,8 @@
 import { createClient } from "@libsql/client"
 import { drizzle } from "drizzle-orm/libsql"
 
-import { env } from "@/config"
-import * as schema from "@/db/schema"
+import { env } from "../config.js"
+import * as schema from "../db/schema.js"
 
 const client = createClient({
     url: env.DATABASE_URL,

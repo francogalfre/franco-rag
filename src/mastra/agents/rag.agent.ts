@@ -1,11 +1,11 @@
 import { Agent } from "@mastra/core/agent"
 
-import { ragAgentPrompt } from "@/mastra/agents/prompts/rag.prompt"
-import { scorers } from "@/mastra/evals"
-import { ragAgentMemory } from "@/mastra/stores/memory"
-import { ragAgentModel } from "@/mastra/agents/llm"
+import { ragAgentPrompt } from "./prompts/rag.prompt.js"
+import { scorers } from "../evals/index.js"
+import { ragAgentMemory } from "../stores/memory.js"
+import { ragAgentModel } from "./llm.js"
 
-import { vectorQueryTool, fetchUrlTool, mcpTools } from "@/mastra/tools"
+import { vectorQueryTool, fetchUrlTool, mcpTools } from "../tools/index.js"
 
 export const ragAgent = new Agent({
     id: "rag-agent",

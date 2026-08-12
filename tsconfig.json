@@ -28,13 +28,6 @@
         "noUnusedLocals": false,
         "noUnusedParameters": false,
         "noPropertyAccessFromIndexSignature": false,
-        "ignoreDeprecations": "6.0",
-        // Path aliasing
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "./src/*"
-            ]
-        }
+        "ignoreDeprecations": "6.0"
     }
 }

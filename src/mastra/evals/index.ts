@@ -4,8 +4,8 @@ import {
     createHallucinationScorer,
 } from "@mastra/evals/scorers/prebuilt"
 
-import { LLM_MODEL_ID } from "@/config"
-import { openrouter } from "@/utils/openrouter"
+import { LLM_MODEL_ID } from "../../config.js"
+import { openrouter } from "../../utils/openrouter.js"
 
 const model = openrouter.chat(LLM_MODEL_ID)
 

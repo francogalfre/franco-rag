@@ -1,2 +1,2 @@
-export { libsqlStorage } from "./memory"
-export { libsqlVector } from "./vectors"
+export { libsqlStorage } from "./memory.js"
+export { libsqlVector } from "./vectors.js"

@@ -2,11 +2,11 @@ import { join } from "node:path"
 import { MDocument } from "@mastra/rag"
 import { embedMany } from "ai"
 
-import { EMBEDDING_MODEL } from "@/config"
-import { openrouter } from "@/utils/openrouter"
+import { EMBEDDING_MODEL } from "../config.js"
+import { openrouter } from "../utils/openrouter.js"
 
-import { resetIndex, setupIndex, save } from "@/ingest/vector"
-import type { FileResult } from "@/ingest/types"
+import { resetIndex, setupIndex, save } from "./vector.js"
+import type { FileResult } from "./types.js"
 
 const CONTENT_DIR = join(process.cwd(), "content")
 

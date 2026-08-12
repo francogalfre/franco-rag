@@ -1,13 +1,13 @@
 import { Hono } from "hono"
 import { cors } from "hono/cors"
 
-import { mastra } from "@/mastra"
+import { mastra } from "./mastra/index.js"
 import { MastraServer, type HonoBindings, type HonoVariables } from "@mastra/hono"
 
-import { env } from "@/config"
+import { env } from "./config.js"
 
-import { securityMiddleware } from "@/server/middlewares"
-import { rateLimitMiddleware } from "@/server/rate-limit"
+import { securityMiddleware } from "./server/middlewares.js"
+import { rateLimitMiddleware } from "./server/rate-limit.js"
 
 const app = new Hono<{ Bindings: HonoBindings; Variables: HonoVariables }>()
 

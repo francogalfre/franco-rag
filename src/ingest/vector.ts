@@ -1,5 +1,5 @@
 import { LibSQLVector } from "@mastra/libsql"
-import { env, VECTOR_INDEX } from "@/config"
+import { env, VECTOR_INDEX } from "../config.js"
 
 export const vector = new LibSQLVector({
     id: "libsql-vector",

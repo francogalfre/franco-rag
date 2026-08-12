@@ -1,2 +1,2 @@
-export { logger } from "./logger"
-export { observability } from "./tracing"
+export { logger } from "./logger.js"
+export { observability } from "./tracing.js"

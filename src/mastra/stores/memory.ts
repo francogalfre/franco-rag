@@ -1,7 +1,7 @@
 import { LibSQLStore } from "@mastra/libsql"
 import { Memory } from "@mastra/memory"
 
-import { env } from "@/config"
+import { env } from "../../config.js"
 
 export const libsqlStorage = new LibSQLStore({
     id: "libsql-storage",

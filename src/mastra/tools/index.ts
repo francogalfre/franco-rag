@@ -1,3 +1,3 @@
-export { mcpTools } from "./mcp.tool"
-export { vectorQueryTool } from "./rag.tool"
-export { fetchUrlTool } from "./fetch.tool"
+export { mcpTools } from "./mcp.tool.js"
+export { vectorQueryTool } from "./rag.tool.js"
+export { fetchUrlTool } from "./fetch.tool.js"

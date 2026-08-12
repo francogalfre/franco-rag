@@ -1,8 +1,8 @@
 import { eq } from "drizzle-orm"
 import type { MiddlewareHandler } from "hono"
 
-import { db } from "@/utils/database"
-import { rateLimits } from "@/db/schema"
+import { db } from "../utils/database.js"
+import { rateLimits } from "../db/schema.js"
 
 const WINDOW_MS = 3 * 60_000
 const MAX_REQUESTS = 5

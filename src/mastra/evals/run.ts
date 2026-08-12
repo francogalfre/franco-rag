@@ -1,10 +1,10 @@
-import { mastra } from "@/mastra"
+import { mastra } from "../../mastra/index.js"
 
-import { evalDataset } from "@/mastra/evals/dataset"
+import { evalDataset } from "./dataset.js"
 import { createAnswerRelevancyScorer } from "@mastra/evals/scorers/prebuilt"
 
-import { LLM_MODEL_ID } from "@/config"
-import { openrouter } from "@/utils/openrouter"
+import { LLM_MODEL_ID } from "../../config.js"
+import { openrouter } from "../../utils/openrouter.js"
 
 const model = openrouter.chat(LLM_MODEL_ID)
 const scorer = createAnswerRelevancyScorer({ model })

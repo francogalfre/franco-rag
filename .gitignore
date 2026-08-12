@@ -37,6 +37,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 ./.mastra
 /.mastra
 src/mastra/public
+
+content
+
 # Local Pi runtime state
 .atl/
 

@@ -1,7 +1,7 @@
 import { createVectorQueryTool } from "@mastra/rag"
 
-import { EMBEDDING_MODEL, VECTOR_INDEX, } from "@/config"
-import { openrouter } from "@/utils/openrouter"
+import { EMBEDDING_MODEL, VECTOR_INDEX, } from "../../config.js"
+import { openrouter } from "../../utils/openrouter.js"
 
 export const vectorQueryTool = createVectorQueryTool({
     vectorStoreName: "libsqlVector",
