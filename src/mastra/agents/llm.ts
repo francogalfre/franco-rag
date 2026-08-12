@@ -7,7 +7,7 @@ export const ragAgentModel = [
         modelSettings: { maxOutputTokens: 600 }
     },
     {
-        model: "openrouter/openai/gpt-oss-120b:free",
+        model: env.LLM_MODEL_FALLBACK,
         maxRetries: 3,
         modelSettings: { maxOutputTokens: 600 }
     },

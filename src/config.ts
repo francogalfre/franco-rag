@@ -7,7 +7,8 @@ const EnvSchema = z.object({
 
     // --------- LLM
     OPENROUTER_API_KEY: z.string().min(1),
-    LLM_MODEL: z.string().default("openrouter/minimax/minimax-m2.5:free"),
+    LLM_MODEL: z.string().default("openrouter/free"),
+    LLM_MODEL_FALLBACK: z.string(),
 
     // --------- Observability
     LANGFUSE_PUBLIC_KEY: z.string().optional(),
